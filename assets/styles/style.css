@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700&display=swap");
+
+:root {
+  --primary-color: #2383dd;
+  --solid-box-shadow: 4px 4px 0px black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  padding: 0;
+}
+
+/* Header */
+header {
+  display: inline;
+}
+
+.jumbotron {
+  padding: 25px;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logo-brand img {
+  width: 300px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.jumbotron h1 {
+  margin-top: 0;
+}
+
+.jumbotron h1 a {
+  color: black;
+  font-size: 1.1em;
+  text-shadow: 3px 3px 0px var(--primary-color);
+}
+
+.jumbotron h1 a:hover {
+  text-decoration: underline;
+}
+
+/* ---- */
+
+/* Navbar */
+nav {
+  background-color: var(--primary-color);
+  padding: 2px 4px;
+  position: sticky;
+  top: 0;
+  box-shadow: var(--solid-box-shadow);
+  border-style: solid;
+}
+
+nav li,
+nav a {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+  display: inline;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+nav span:hover,
+nav a:hover,
+.dropdown-content p:hover {
+  font-weight: bolder;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  color: black;
+  box-shadow: 2px 2px 0px #000;
+  border-style: solid;
+  padding: 2px 16px;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ----- */
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+#content {
+  width: 65%;
+  max-width: 1024px;
+}
+
+.card {
+  box-shadow: var(--solid-box-shadow);
+  border-style: solid;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.category-label span {
+  padding: 2px 8px;
+  margin-right: 8px;
+  font-weight: bold;
+  border: solid 3px;
+  border-radius: 14px;
+  box-shadow: 2px 2px 0px black;
+  background-color: var(--primary-color);
+}
+
+.featured-image,
+.profile img {
+  width: 100%;
+  max-height: 300px;
+  margin-bottom: 12px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.profile {
+  text-align: center;
+}
+
+aside {
+  width: 30%;
+  min-width: 300px;
+  padding-left: 20px;
+  z-index: -1;
+}
+
+aside article {
+  position: sticky;
+  top: 85px;
+}
+
+aside section {
+  display: flex;
+  flex-direction: column;
+}
+
+aside section table td {
+  text-align: start;
+  padding: 4px 14px;
+}
+
+aside section table th {
+  width: 35%;
+  text-align: end;
+  padding: 4px 14px;
+}
+
+
+footer {
+  padding: 20px;
+  color: black;
+  background-color: var(--primary-color);
+  text-align: center;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 769px) {
+  aside {
+    max-width: 512px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .logo-brand img {
+    width: 200px;
+    height: 100px;
+  }
+
+  #content,
+  aside {
+    width: 100%;
+    padding: 0;
+  }
+}
